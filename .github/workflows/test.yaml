@@ -23,4 +23,5 @@ jobs:
       - name: Start MySQL
         run: |
           sudo /etc/init.d/mysql start
+          systemctl status mysqld
           mysql -e "CREATE DATABASE IF NOT EXISTS $DB_DATABASE;" -u$DB_USER -p$DB_PASSWORD
